@@ -45,7 +45,7 @@ This project demonstrates my ability to:
 ## 📂 Project Structure  
 crypto-arbitrage-analyzer/
 │
-├── arbitrage_loop.py # Main program file (real-time analyzer)
+├── arbitrage_scanner.py # Main program file (real-time analyzer)
 ├── arbitrage_log.txt # Automatically generated log file
 ├── README.md # Project documentation
 └── .gitignore # Ignored files (optional)
@@ -93,7 +93,7 @@ You can adjust all parameters at the top of the script:
 
 ```python
 SYMBOLS = ["BTC/USDT", "ETH/USDT"]
-SPREAD_THRESHOLD = 0.05        # % threshold
+SPREAD_THRESHOLD = 0.0003        # % threshold
 CYCLE_COUNT = 20
 SLEEP_BETWEEN_CHECKS = 5
 REST_AFTER_CYCLE = 10
