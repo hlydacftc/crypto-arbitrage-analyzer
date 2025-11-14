@@ -23,12 +23,12 @@ This project demonstrates my ability to:
 
 ## 🚀 Features  
 - ✔ Real-time price tracking (via `ccxt`)  
-- ✔ Multiple cryptocurrency pair support  
+- ✔ Supports multiple crypto pairs  
 - ✔ Adjustable profit threshold  
 - ✔ Audible arbitrage alert (Windows beep)  
-- ✔ Timestamped logging of detected opportunities  
+- ✔ Timestamped logging  
 - ✔ Cycle-based scanning: 20 checks → rest → repeat  
-- ✔ Clean, modular, readable code  
+- ✔ Clean, modular structure  
 - ✔ Fully documented and open-source  
 
 ---
@@ -36,11 +36,11 @@ This project demonstrates my ability to:
 ## 🛠 Technology Stack  
 | Component      | Description                       |
 |----------------|-----------------------------------|
-| **Python 3.x** | Primary programming language      |
+| **Python 3.x** | Main programming language         |
 | **ccxt**       | Crypto exchange API wrapper       |
-| **winsound**   | Windows-native alarm sounds       |
+| **winsound**   | Windows-native alert sounds       |
 | **Binance**    | Price data source                 |
-| **Logging**    | Events written to `arbitrage_log.txt` |
+| **Logging**    | Output saved to `arbitrage_log.txt` |
 
 ---
 
@@ -49,12 +49,15 @@ This project demonstrates my ability to:
 crypto-arbitrage-analyzer/
 │
 ├── arbitrage_scanner.py      # Main real-time analyzer
-├── arbitrage_log.txt         # Output log file (auto-generated)
+├── arbitrage_log.txt         # Auto-generated log file
 ├── README.md                 # Project documentation
-└── .gitignore                # Optional ignored files list
+└── .gitignore                # Optional ignored files
+
+
 
 ⚙️ How It Works
-Each cycle performs the following steps:
+
+Each scan cycle performs the following steps:
 
 Fetches bid and ask prices for each symbol
 
@@ -64,17 +67,19 @@ Absolute spread
 
 Spread percentage
 
-Compares the spread percentage with the defined threshold
+Compares the spread to a defined threshold
 
 If the threshold is met or exceeded:
 
 Displays an alert
 
-Plays Windows beep sound
+Plays a Windows beep sound
 
-Logs the opportunity with full details
+Logs a detailed entry
 
-The script runs every 5 seconds and, after every 20 cycles, pauses for 10 seconds before resuming.
+The script checks prices every 5 seconds, and after 20 cycles, it pauses for 10 seconds before resuming.
+
+
 
 📈 Example Output
 
@@ -90,7 +95,9 @@ Spread: 0.0100 USD (0.0003%)
 🚨🚨 ARBITRAGE OPPORTUNITY DETECTED! 🚨🚨
 ⭐ PROFITABLE SPREAD FOUND ⭐
 
+
 🔧 Configuration
+
 SYMBOLS = ["BTC/USDT", "ETH/USDT"]
 SPREAD_THRESHOLD = 0.0003
 CYCLE_COUNT = 20
@@ -102,32 +109,33 @@ LOG_FILE = "arbitrage_log.txt"
 
 Install the required package: pip install ccxt
 Run the program: python arbitrage_scanner.py
-
-Windows will play an alert sound during profitable spread detection.
+Windows will play an alert sound when a profitable opportunity is found.
 
 📝 Log File Example
 [2025-02-15 18:42:23] ETH/USDT | Spread: 0.0100 USD (0.0003%) | Bid: 3097.64 | Ask: 3097.65
 
+
 📌 Notes
 
-This project is built for educational and demonstration purposes only.
-It showcases:
+This project is built for learning and demonstration purposes.
+It highlights:
 
 Analytical thinking
 
-Automation logic
+Real-time automation logic
 
-Real-time data processing
+Financial data processing
 
-Professional code documentation
+Professional documentation
 
-It is not intended for live trading without further development.
+This tool is not intended for live trading without further improvement.
 
 ✨ Author
 
 Hilayda Çiftci
 Material & R&D Engineer | Python Learner | Data Automation Enthusiast
 🔗 GitHub: https://github.com/hlydacftc
+---
 
 
 
