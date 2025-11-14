@@ -43,13 +43,13 @@ This project demonstrates my ability to:
 ---
 
 ## 📂 Project Structure  
+
 crypto-arbitrage-analyzer/
 │
-├── arbitrage_scanner.py # Main program file (real-time analyzer)
-├── arbitrage_log.txt # Automatically generated log file
-├── README.md # Project documentation
+├── arbitrage_scanner.py # Main real-time analyzer
+├── arbitrage_log.txt # Auto-generated log file
+├── README.md # Documentation
 └── .gitignore # Ignored files (optional)
-
 
 ---
 
@@ -66,8 +66,8 @@ At each cycle, the script:
    - Plays alarm (`winsound.Beep`)  
    - Logs detailed entry to file  
 
-The process repeats every 5 seconds  
-→ and every 20 checks, the system rests 10 seconds and resumes.
+The process repeats every 5 seconds.  
+Every 20 checks, the system rests 10 seconds and resumes.
 
 ---
 
@@ -85,15 +85,13 @@ Spread: 0.0100 USD (0.0003%)
 🚨🚨 ARBITRAGE OPPORTUNITY DETECTED! 🚨🚨
 ⭐ PROFITABLE SPREAD FOUND ⭐
 
-
 ---
 
 ## 🔧 Configuration  
-You can adjust all parameters at the top of the script:
 
 ```python
 SYMBOLS = ["BTC/USDT", "ETH/USDT"]
-SPREAD_THRESHOLD = 0.0003        # % threshold
+SPREAD_THRESHOLD = 0.0003
 CYCLE_COUNT = 20
 SLEEP_BETWEEN_CHECKS = 5
 REST_AFTER_CYCLE = 10
@@ -101,29 +99,36 @@ LOG_FILE = "arbitrage_log.txt"
 
 ▶️ How to Run
 
-Install the required library: pip install ccxt
+Install ccxt: pip install ccxt
 
-Run the script: python arbitrage_loop.py
+Run the program: python arbitrage_scanner.py
 
 Windows will play a sound when a profitable spread is detected.
 
-📝 Log File Example (auto-generated)
+📝 Log File Example
 
 [2025-02-15 18:42:23] ETH/USDT | Spread: 0.0100 USD (0.0003%) | Bid: 3097.64 | Ask: 3097.65
 
 📌 Notes
 
-This is a learning + demonstration project.
+This is a learning & demonstration project.
+It shows:
 
-Designed to show analytical thinking, automation skills, and fast Python learning ability.
+Analytical thinking
+
+Automation logic
+
+Real-time data handling
+
+Professional documentation
 
 Not intended for live trading without further development.
+
 ✨ Author
 
 Hilayda Çiftci
 Material & R&D Engineer | Python Learner | Data Automation Enthusiast
 GitHub: https://github.com/hlydacftc
-
 
 ---
 
